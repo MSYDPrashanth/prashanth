@@ -1,0 +1,37 @@
+{/usr/lib/jvm/java-1.8.0-openjdk-amd64
+export JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-amd64"
+export PATH=$JAVA_HOME/bin:$PATH
+MAVEN_HOME=/usr/share/maven}
+
+
+
+*******************************************
+
+
+first install java and set the java path
+
+STEPS :
+
+sudo apt-get update
+sudo apt install default-jdk
+java -version
+update-alternatives --config java (to find the path of the java file)
+sudo nano /etc/environment (adding the path of the java file)
+source /etc/environment
+echo $JAVA_HOME
+
+*******************************************
+install maven and set the maven path
+
+steps:
+apt install maven
+mvn --version
+
+
+clone git
+cd spring-petclinic
+mvn package
+
+
+
+
